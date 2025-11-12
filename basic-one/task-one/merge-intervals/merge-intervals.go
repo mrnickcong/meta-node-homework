@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func merge(intervals [][]int) [][]int {
+func mergeIntervals(intervals [][]int) [][]int {
 	var res [][]int
 	for i := 0; i < len(intervals); i++ {
 		if len(res) == 0 || res[len(res)-1][1] < intervals[i][0] {
@@ -16,5 +16,5 @@ func merge(intervals [][]int) [][]int {
 
 func main() {
 	intervals := [][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}
-	fmt.Println(merge(intervals))
+	fmt.Println(mergeIntervals(intervals))
 }
